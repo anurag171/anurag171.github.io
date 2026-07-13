@@ -1,31 +1,34 @@
-const toggle = document.querySelector('.theme-toggle');
 const root = document.documentElement;
 const storedTheme = localStorage.getItem('theme');
 
-const applyTheme = (theme) => {
+const applyTheme = (theme, toggleButton) => {
   if (theme === 'dark') {
-    root.setAttribute('data-theme', 'dark');
-    toggle.textContent = 'Light mode';
+    root.dataset.theme = 'dark';
+    if (toggleButton) toggleButton.textContent = 'Light mode';
   } else {
-    root.removeAttribute('data-theme');
-    toggle.textContent = 'Dark mode';
+    delete root.dataset.theme;
+    if (toggleButton) toggleButton.textContent = 'Dark mode';
   }
 };
 
 const getPreferredTheme = () => {
-  if (storedTheme) {
+  if (storedTheme === 'dark' || storedTheme === 'light') {
     return storedTheme;
   }
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 };
 
-applyTheme(getPreferredTheme());
+window.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.theme-toggle');
+  const theme = getPreferredTheme();
+  applyTheme(theme, toggle);
 
-if (toggle) {
+  if (!toggle) return;
+
   toggle.addEventListener('click', () => {
-    const currentTheme = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    const currentTheme = root.dataset.theme === 'dark' ? 'dark' : 'light';
     const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    applyTheme(nextTheme);
+    applyTheme(nextTheme, toggle);
     localStorage.setItem('theme', nextTheme);
   });
-}
+});
