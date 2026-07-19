@@ -164,7 +164,19 @@ a:hover {
   margin-top: 2rem;
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+}
+
+@media (max-width: 980px) {
+  .info-grid {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .info-grid article,
@@ -183,7 +195,82 @@ a:hover {
   color: var(--text);
 }
 
-.project-card__description,
+.project-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.project-card__meta-item {
+  flex: 1 1 140px;
+  min-width: 140px;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid var(--surface-border);
+  border-radius: 1rem;
+  padding: 0.85rem 1rem;
+}
+
+:root[data-theme="dark"] .project-card__meta-item,
+html[data-theme="dark"] .project-card__meta-item {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.project-card__meta-item span {
+  display: block;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+.project-card__meta-item p {
+  margin: 0;
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.project-card__details {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.project-card__detail {
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid var(--surface-border);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+:root[data-theme="dark"] .project-card__detail,
+html[data-theme="dark"] .project-card__detail {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.project-card__detail strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+.project-card__detail p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.project-card__description {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .info-grid p {
   margin: 0;
   color: var(--muted);
