@@ -4,48 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Anurag Mishra</title>
+  <meta name="description" content="MBA in Finance, B.Tech in Mechanical Engineering, and two decades bridging business strategy with technical architecture.">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="logo" href="index.html">Anurag Mishra</a>
+      <a class="logo" href="index.html">
+        <span class="logo-mark">AM</span>
+        <span>Anurag Mishra</span>
+      </a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="about.html" aria-current="page">About</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <button type="button" class="theme-toggle" aria-label="Toggle theme">Dark mode</button>
+      <div class="header-actions">
+        <span class="status-pill"><span class="status-dot" aria-hidden="true"></span>Open to conversations</span>
+        <button type="button" class="theme-toggle" aria-label="Toggle color theme">Dark mode</button>
+      </div>
     </div>
   </header>
 
   <main class="container content">
     <section class="hero">
-      <p class="eyebrow">About Me</p>
-      <h1>Modern strategy. Practical execution.</h1>
-      <p class="lead">I blend executive strategy with hands‑on technical design. My background includes an MBA in Finance and a B.Tech in Mechanical Engineering.</p>
+      <p class="eyebrow">About</p>
+      <h1>Strategy that ships. Architecture that holds.</h1>
+      <p class="lead">I blend executive strategy with hands-on technical design — an MBA in Finance and a B.Tech in Mechanical Engineering, applied to two decades of building systems that financial institutions depend on.</p>
     </section>
+
+    <div class="rail" aria-hidden="true"></div>
 
     <section class="info-grid">
       <article>
         <h2>Strategic Leadership</h2>
-        <p>I bring clarity to complex problems by aligning business goals with technical delivery.</p>
+        <p>I bring clarity to complex problems by aligning business goals with technical delivery — across chapters, guilds, and cross-functional teams.</p>
       </article>
       <article>
         <h2>Design &amp; Delivery</h2>
-        <p>My work combines disciplined planning with a focus on polished, practical outcomes.</p>
+        <p>Disciplined planning paired with a focus on polished, practical outcomes — from solutions architecture to production rollout.</p>
       </article>
       <article>
         <h2>Growth Mindset</h2>
-        <p>I value continuous learning, strong collaboration, and solutions that scale.</p>
+        <p>Continuous learning, strong collaboration, and a bias toward solutions that scale — technically and organizationally.</p>
       </article>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>Crafting thoughtful experiences at the intersection of business and technology.</p>
+    <div class="container footer-inner">
+      <p>Anurag Mishra — Senior VP Engineering, payments &amp; cloud-native platforms.</p>
+      <div class="footer-links">
+        <a href="mailto:anurag171@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/anurag-mishra-267559115/">LinkedIn</a>
+        <a href="https://github.com/anurag171">GitHub</a>
+      </div>
     </div>
   </footer>
   <script src="theme-toggle.js"></script>

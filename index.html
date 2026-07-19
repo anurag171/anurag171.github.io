@@ -4,39 +4,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home — Anurag Mishra</title>
+  <meta name="description" content="Anurag Mishra, SVP Engineering at Deutsche Bank Group. Building resilient, event-driven payments platforms across tier-1 financial institutions.">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="logo" href="index.html">Anurag Mishra</a>
+      <a class="logo" href="index.html">
+        <span class="logo-mark">AM</span>
+        <span>Anurag Mishra</span>
+      </a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html" aria-current="page">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <button type="button" class="theme-toggle" aria-label="Toggle theme">Dark mode</button>
+      <div class="header-actions">
+        <span class="status-pill"><span class="status-dot" aria-hidden="true"></span>Open to conversations</span>
+        <button type="button" class="theme-toggle" aria-label="Toggle color theme">Dark mode</button>
+      </div>
     </div>
   </header>
 
   <main class="container content">
     <section class="hero">
-      <p class="eyebrow">Welcome</p>
-      <h1>Senior engineering leadership with a strategic edge.</h1>
-      <p class="lead">I’m Anurag Mishra, Senior VP Engineering at Deutsche Bank Group, with experience in building resilient systems and aligning teams to business outcomes.</p>
-      <p>Connect with me on <a href="https://www.linkedin.com/in/anurag-mishra-267559115">LinkedIn</a> for collaboration and insights.</p>
+      <p class="eyebrow">SVP Engineering · Deutsche Bank Group</p>
+      <h1>Engineering the systems banks trust to move money.</h1>
+      <p class="lead">I'm Anurag Mishra. Nineteen-plus years designing resilient, event-driven platforms for payments — at Deutsche Bank, HSBC, Citi, and Fundtech — where downtime isn't an option and every transaction has to land.</p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/anurag-mishra-267559115">Connect on LinkedIn</a>
+        <a class="btn btn-secondary" href="projects.html">View selected work</a>
+      </div>
+
+      <div class="stats-ticker">
+        <div class="stat-item">
+          <span class="stat-value">19+ yrs</span>
+          <span class="stat-label">In engineering leadership</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">1,500 TPS</span>
+          <span class="stat-label">Payments platform delivered</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">4</span>
+          <span class="stat-label">Tier-1 institutions</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">ISO-20022</span>
+          <span class="stat-label">SWIFT · Instant payments</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="rail" aria-hidden="true"></div>
+
+    <section class="info-grid">
+      <article>
+        <h2>Resilient by design</h2>
+        <p>Durable saga patterns, zero-downtime releases, and workflow orchestration built for systems where a failed transaction is not an option.</p>
+      </article>
+      <article>
+        <h2>Event-driven at scale</h2>
+        <p>Kafka-backed platforms processing thousands of transactions per second, with observability and predictive failure detection built in.</p>
+      </article>
+      <article>
+        <h2>Strategy meets delivery</h2>
+        <p>An MBA in Finance and two decades of hands-on architecture — translating business priorities into production-grade systems.</p>
+      </article>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>Focused on practical innovation, trusted delivery, and growth-driven leadership.</p>
+    <div class="container footer-inner">
+      <p>Anurag Mishra — Senior VP Engineering, payments &amp; cloud-native platforms.</p>
+      <div class="footer-links">
+        <a href="mailto:anurag171@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/anurag-mishra-267559115/">LinkedIn</a>
+        <a href="https://github.com/anurag171">GitHub</a>
+      </div>
     </div>
   </footer>
   <script src="theme-toggle.js"></script>
 </body>
 </html>
-
-
- 

@@ -4,48 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Anurag Mishra</title>
+  <meta name="description" content="Get in touch with Anurag Mishra for advisory, collaboration, and engineering leadership conversations.">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="logo" href="index.html">Anurag Mishra</a>
+      <a class="logo" href="index.html">
+        <span class="logo-mark">AM</span>
+        <span>Anurag Mishra</span>
+      </a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html" aria-current="page">Contact</a>
       </nav>
-      <button type="button" class="theme-toggle" aria-label="Toggle theme">Dark mode</button>
+      <div class="header-actions">
+        <span class="status-pill"><span class="status-dot" aria-hidden="true"></span>Open to conversations</span>
+        <button type="button" class="theme-toggle" aria-label="Toggle color theme">Dark mode</button>
+      </div>
     </div>
   </header>
 
   <main class="container content">
     <section class="hero">
-      <p class="eyebrow">Contact</p>
-      <h1>Let’s connect and move ideas forward.</h1>
-      <p class="lead">I’m available for advisory, collaboration, and leadership conversations. Reach out by email or LinkedIn.</p>
+      <p class="eyebrow">Get in Touch</p>
+      <h1>Let's talk architecture, strategy, or your next platform.</h1>
+      <p class="lead">I'm available for advisory, collaboration, and leadership conversations. Reach out by email or LinkedIn.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:anurag171@gmail.com">Email me</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/anurag-mishra-267559115/">Message on LinkedIn</a>
+      </div>
     </section>
 
+    <div class="rail" aria-hidden="true"></div>
+
     <section class="info-grid">
-      <article>
+      <article class="contact-card">
         <h2>Email</h2>
         <p><a href="mailto:anurag171@gmail.com">anurag171@gmail.com</a></p>
       </article>
-      <article>
+      <article class="contact-card">
         <h2>LinkedIn</h2>
-        <p><a href="https://www.linkedin.com/in/anurag-mishra-267559115/">https://www.linkedin.com/in/anurag-mishra-267559115/</a></p>
+        <p><a href="https://www.linkedin.com/in/anurag-mishra-267559115/">linkedin.com/in/anurag-mishra-267559115</a></p>
       </article>
-      <article>
+      <article class="contact-card">
         <h2>GitHub</h2>
-        <p><a href="https://github.com/anurag171">https://github.com/anurag171</a></p>
+        <p><a href="https://github.com/anurag171">github.com/anurag171</a></p>
       </article>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>Open to new partnerships that bridge business and technology.</p>
+    <div class="container footer-inner">
+      <p>Anurag Mishra — Senior VP Engineering, payments &amp; cloud-native platforms.</p>
+      <div class="footer-links">
+        <a href="mailto:anurag171@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/anurag-mishra-267559115/">LinkedIn</a>
+        <a href="https://github.com/anurag171">GitHub</a>
+      </div>
     </div>
   </footer>
   <script src="theme-toggle.js"></script>

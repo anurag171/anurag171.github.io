@@ -1,34 +1,30 @@
-const root = document.documentElement;
-const storedTheme = localStorage.getItem('theme');
+(function () {
+  var root = document.documentElement;
 
-const applyTheme = (theme, toggleButton) => {
-  if (theme === 'dark') {
-    root.dataset.theme = 'dark';
-    if (toggleButton) toggleButton.textContent = 'Light mode';
-  } else {
-    delete root.dataset.theme;
-    if (toggleButton) toggleButton.textContent = 'Dark mode';
+  function label(theme) {
+    return theme === 'dark' ? 'Light mode' : 'Dark mode';
   }
-};
 
-const getPreferredTheme = () => {
-  if (storedTheme === 'dark' || storedTheme === 'light') {
-    return storedTheme;
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+      btn.textContent = label(theme);
+      btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    });
   }
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-};
 
-window.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.querySelector('.theme-toggle');
-  const theme = getPreferredTheme();
-  applyTheme(theme, toggle);
+  document.addEventListener('DOMContentLoaded', function () {
+    // data-theme was already set pre-paint by the inline script in <head>;
+    // this just syncs the button label and wires up the click handler.
+    applyTheme(root.getAttribute('data-theme') || 'light');
 
-  if (!toggle) return;
-
-  toggle.addEventListener('click', () => {
-    const currentTheme = root.dataset.theme === 'dark' ? 'dark' : 'light';
-    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    applyTheme(nextTheme, toggle);
-    localStorage.setItem('theme', nextTheme);
+    document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        var next = current === 'dark' ? 'light' : 'dark';
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        applyTheme(next);
+      });
+    });
   });
-});
+})();
