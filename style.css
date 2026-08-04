@@ -10,28 +10,28 @@
   color-scheme: light;
 
   /* base */
-  --bg: #f3f4f7;
-  --bg-line: rgba(11, 18, 32, 0.045);
-  --surface: #ffffff;
-  --surface-2: #eceef2;
-  --border: rgba(11, 18, 32, 0.11);
+  --bg: #f7f2ff;
+  --bg-line: rgba(99, 74, 144, 0.06);
+  --surface: #fcfaff;
+  --surface-2: #efe7ff;
+  --border: rgba(83, 58, 132, 0.14);
 
   /* text */
-  --ink: #0b1220;
-  --muted: #566072;
-  --footer-text: #6b7280;
+  --ink: #20162f;
+  --muted: #6a5f7d;
+  --footer-text: #7b7090;
 
-  /* signal accent — burnished gold */
-  --accent: #a9760f;
-  --accent-strong: #7a5710;
-  --accent-tint: rgba(169, 118, 15, 0.12);
-  --accent-contrast: #fffaf0;
+  /* signal accent — soft violet */
+  --accent: #7c4dff;
+  --accent-strong: #5b34d1;
+  --accent-tint: rgba(124, 77, 255, 0.13);
+  --accent-contrast: #fcf8ff;
 
   /* rail accent — status/live only */
   --rail: #14805a;
   --rail-tint: rgba(20, 128, 90, 0.14);
 
-  --shadow: rgba(11, 18, 32, 0.10);
+  --shadow: rgba(83, 58, 132, 0.12);
 
   --font-display: 'Space Grotesk', system-ui, sans-serif;
   --font-body: 'IBM Plex Sans', system-ui, sans-serif;
